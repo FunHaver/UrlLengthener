@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <h1>Insert your url, get a longer one!</h1>
+
+        <form class="input-form" method="post" action="{{url_for('forwardToDestination.displayJSON')}}">
+            <label for="destination">URL:</label>
+            <input class="url-input" name="destination" id="destination" required>
+            <input class="submit-button" type="submit" value="Lengthen">
+        </form>
+    {% endblock %}
